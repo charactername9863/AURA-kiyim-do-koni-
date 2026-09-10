@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review the products in your AURA shopping cart.">
+    <title>Your Cart | AURA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="store-body">
+    <header class="store-nav">
+        <a class="store-brand" href="store.html">AURA</a>
+        <nav aria-label="Main navigation">
+            <a href="store.html#featured">Featured</a>
+            <a href="store.html#new-arrivals">New arrivals</a>
+            <a href="store.html#collections">Collections</a>
+        </nav>
+        <div class="store-actions">
+            <a class="cart-page-link" href="cart.html" aria-current="page">Cart <span class="nav-cart-count">0</span></a>
+        </div>
+    </header>
+
+    <main class="cart-page">
+        <div class="cart-page-header">
+            <div>
+                <p class="eyebrow">AURA · Bukhara</p>
+                <h1>Your cart</h1>
+                <p>Review your selected pieces before checkout.</p>
+            </div>
+            <a class="continue-shopping" href="store.html#new-arrivals">Continue shopping</a>
+        </div>
+
+        <section class="cart-page-card" aria-labelledby="cart-title">
+            <h2 id="cart-title" class="visually-hidden">Selected products</h2>
+            <div class="cart-items" aria-live="polite">
+                <p class="empty-cart">Your cart is empty.</p>
+            </div>
+            <div class="cart-summary">
+                <div>
+                    <span>Total</span>
+                    <strong class="cart-total">$0</strong>
+                </div>
+                <button class="checkout-button" type="button">Proceed to checkout</button>
+                <button class="clear-cart-button" type="button">Clear cart</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="store-footer">
+        <p>AURA · Bukhara clothing for modern living.</p>
+        <a href="store.html">Back to store</a>
+    </footer>
+
+    <div class="checkout-modal" id="checkout-modal" hidden>
+        <div class="checkout-card" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+            <button class="close-checkout" type="button" aria-label="Close checkout">&times;</button>
+            <p class="eyebrow">AURA checkout</p>
+            <h2 id="checkout-title">Complete your order</h2>
+            <p class="checkout-intro">Enter your payment and delivery details.</p>
+            <form class="checkout-form">
+                <label>Card number
+                    <input name="card-number" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456" minlength="16" required>
+                </label>
+                <div class="checkout-row">
+                    <label>Expiry date
+                        <input name="expiry" placeholder="MM/YY" autocomplete="cc-exp" required>
+                    </label>
+                    <label>CVV
+                        <input name="cvv" inputmode="numeric" autocomplete="cc-csc" placeholder="123" minlength="3" required>
+                    </label>
+                </div>
+                <label>Delivery address
+                    <input name="address" autocomplete="street-address" placeholder="Street, city, country" required>
+                </label>
+                <label>Phone number for SMS
+                    <input name="phone" type="tel" autocomplete="tel" placeholder="+998 90 123 45 67" required>
+                </label>
+                <button class="checkout-submit" type="submit">Place order</button>
+                <p class="checkout-status" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

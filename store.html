@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop AURA clothing, inspired by Bukhara and made for modern living.">
+    <title>AURA | Bukhara Clothing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="store-body">
+    <div class="market-strip"><span data-i18n="deliveryBanner">Free delivery across Uzbekistan on orders over $30</span> <span data-i18n="openBukhara">Open every day · Bukhara</span></div>
+    <header class="store-nav">
+        <a class="store-brand" href="store.html"><span>A</span> AURA</a>
+        <div class="store-location"><small data-i18n="deliverTo">Deliver to</small><strong>Bukhara, Uzbekistan</strong></div>
+        <div class="store-actions">
+            <label class="search-box" for="product-search">
+                <span class="visually-hidden">Search products</span>
+                <input id="product-search" type="search" placeholder="Search products..." autocomplete="off">
+            </label>
+            <label class="avatar-picker" title="Change profile picture">
+                <input class="avatar-input" type="file" accept="image/*">
+                <img class="account-avatar" src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="Profile picture">
+            </label>
+            <a class="account-link" href="settings.html">
+                <span>My account</span>
+            </a>
+            <a class="settings-link" href="settings.html">Settings</a>
+            <select class="language-select" aria-label="Language">
+                <option value="en">EN</option>
+                <option value="ru">RU</option>
+                <option value="uz">UZ</option>
+            </select>
+            <button class="cart-button" type="button" aria-expanded="false" aria-controls="cart-panel">Cart <span>0</span></button>
+        </div>
+    </header>
+    <nav class="category-nav" aria-label="Product categories">
+        <a class="active" href="#new-arrivals" data-i18n="allProducts">All products</a>
+        <a href="#clothing" data-i18n="clothing">Clothing</a>
+        <a href="#gaming" data-i18n="gaming">Gaming</a>
+        <a href="#electronics" data-i18n="electronics">Electronics</a>
+        <a href="#lifestyle" data-i18n="homeLifestyle">Home & lifestyle</a>
+        <a href="#sport" data-i18n="sport">Sport</a>
+        <a href="#deals" data-i18n="deals">Deals</a>
+    </nav>
+
+    <section class="promo-rail" aria-label="Special offers">
+        <article class="promo-card promo-card-main promo-active">
+            <div>
+                <p class="promo-label" data-i18n="auraWeek">AURA WEEK · 01</p>
+                <h2 data-i18n="freshStyles">Fresh styles,<br><em>better prices.</em></h2>
+                <p data-i18n="saleCopy">Save up to 40% on selected clothing and everyday essentials.</p>
+                <a href="#deals" data-i18n="shopSale">Shop the sale <span>→</span></a>
+            </div>
+            <div class="promo-art promo-art-shirt">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500&q=85" alt="AURA cotton clothing promotion">
+            </div>
+        </article>
+        <article class="promo-card promo-card-gaming">
+            <div>
+                <p class="promo-label" data-i18n="playMore">PLAY MORE</p>
+                <h2 data-i18n="gamingPicks">Gaming picks<br>from $9.99</h2>
+                <a href="#gaming" data-i18n="exploreGaming">Explore gaming <span>→</span></a>
+            </div>
+            <div class="promo-art promo-art-console">
+                <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=500&q=85" alt="Gaming setup promotion">
+            </div>
+        </article>
+        <article class="promo-card promo-card-delivery">
+            <div>
+                <p class="promo-label" data-i18n="deliveryDay">DELIVERY DAY</p>
+                <h2 data-i18n="freeDelivery">Free delivery<br>across Uzbekistan</h2>
+                <p data-i18n="orderOver">On every order over $30.</p>
+                <a href="#new-arrivals" data-i18n="startShopping">Start shopping <span>→</span></a>
+            </div>
+            <div class="promo-art promo-art-box">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=500&q=85" alt="AURA delivery package promotion">
+            </div>
+        </article>
+    </section>
+
+    <aside class="cart-panel" id="cart-panel" aria-label="Shopping cart" hidden>
+        <div class="cart-panel-header">
+            <h2>Your cart</h2>
+            <button class="close-cart" type="button" aria-label="Close shopping cart">&times;</button>
+        </div>
+        <div class="cart-items" aria-live="polite">
+            <p class="empty-cart">Your cart is empty.</p>
+        </div>
+        <div class="cart-summary">
+            <div>
+                <span>Total</span>
+                <strong class="cart-total">$0</strong>
+            </div>
+            <button class="checkout-button" type="button">Checkout</button>
+        </div>
+    </aside>
+
+    <div class="cart-toast" role="status" aria-live="polite" aria-hidden="true"></div>
+
+    <div class="checkout-modal" id="checkout-modal" hidden>
+        <div class="checkout-card" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+            <button class="close-checkout" type="button" aria-label="Close checkout">&times;</button>
+            <p class="eyebrow">AURA checkout</p>
+            <h2 id="checkout-title">Complete your order</h2>
+            <p class="checkout-intro">Enter your payment and delivery details.</p>
+            <form class="checkout-form">
+                <label>Card number
+                    <input name="card-number" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456" minlength="16" required>
+                </label>
+                <div class="checkout-row">
+                    <label>Expiry date
+                        <input name="expiry" placeholder="MM/YY" autocomplete="cc-exp" required>
+                    </label>
+                    <label>CVV
+                        <input name="cvv" inputmode="numeric" autocomplete="cc-csc" placeholder="123" minlength="3" required>
+                    </label>
+                </div>
+                <label>Delivery address
+                    <input name="address" autocomplete="street-address" placeholder="Street, city, country" required>
+                </label>
+                <label>Phone number for SMS
+                    <input name="phone" type="tel" autocomplete="tel" placeholder="+998 90 123 45 67" required>
+                </label>
+                <button class="checkout-submit" type="submit">Place order</button>
+                <p class="checkout-status" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+
+    <main class="store-main">
+        <section class="store-hero" id="featured">
+            <p class="eyebrow" data-i18n="bukharaUzbekistan">Bukhara · Uzbekistan</p>
+            <h1 data-i18n="heritagePieces">Heritage pieces.<br><em>Modern spirit.</em></h1>
+            <p class="hero-copy" data-i18n="heroCopy">AURA is a Bukhara clothing house blending Uzbek craft, soft natural fabrics, and an effortless modern silhouette.</p>
+            <a class="shop-button" href="#new-arrivals" data-i18n="exploreCollection">Explore collection</a>
+        </section>
+
+        <section class="product-section" id="new-arrivals" aria-labelledby="new-arrivals-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow" data-i18n="justIn">Just in</p>
+                    <h2 id="new-arrivals-title" data-i18n="newArrivals">New arrivals</h2>
+                </div>
+                <a href="#collections" data-i18n="viewAll">View all</a>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-image product-image-one">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85" alt="Ivory cotton shirt from the AURA Bukhara collection">
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>Bukhara Cotton Shirt</h3>
+                            <p>Soft natural everyday layer</p>
+                        </div>
+                        <strong>$38</strong>
+                    </div>
+                    <button class="buy-button" type="button">Add to cart</button>
+                </article>
+                <article class="product-card">
+                    <div class="product-image product-image-two">
+                        <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=900&q=85" alt="Long flowing dress from the AURA Bukhara collection">
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>Silk Atlas Dress</h3>
+                            <p>Inspired by Bukhara patterns</p>
+                        </div>
+                        <strong>$148</strong>
+                    </div>
+                    <button class="buy-button" type="button">Add to cart</button>
+                </article>
+                <article class="product-card">
+                    <div class="product-image product-image-three">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=900&q=85" alt="Tailored brown jacket from the AURA Bukhara collection">
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>Chapan Jacket</h3>
+                            <p>Tailored outer layer</p>
+                        </div>
+                        <strong>$176</strong>
+                    </div>
+                    <button class="buy-button" type="button">Add to cart</button>
+                </article>
+                <article class="product-card">
+                    <div class="product-image product-image-four">
+                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=85" alt="Elegant cream dress from the AURA Bukhara collection">
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>Ivory Evening Dress</h3>
+                            <p>Made for special evenings</p>
+                        </div>
+                        <strong>$164</strong>
+                    </div>
+                    <button class="buy-button" type="button">Add to cart</button>
+                </article>
+                <article class="product-card">
+                    <div class="product-image product-image-five">
+                        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85" alt="Neutral clothing collection on a rack">
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>Nomad Linen Set</h3>
+                            <p>Lightweight two-piece set</p>
+                        </div>
+                        <strong>$132</strong>
+                    </div>
+                    <button class="buy-button" type="button">Add to cart</button>
+                </article>
+                <article class="product-card">
+                    <div class="product-image product-image-six">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=900&q=85" alt="Neutral linen outfit from the AURA Bukhara collection">
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>Sand Trousers</h3>
+                            <p>Relaxed cut in natural linen</p>
+                        </div>
+                        <strong>$86</strong>
+                    </div>
+                    <button class="buy-button" type="button">Add to cart</button>
+                </article>
+            </div>
+            <p class="search-empty" hidden>No products found. Try another name.</p>
+        </section>
+    </main>
+
+    <footer class="store-footer" id="collections">
+        <p>AURA · Bukhara clothing for modern living.</p>
+        <div class="store-footer-links">
+            <a href="cart.html">Go to cart</a>
+            <a href="index.html?logout=1">Sign out</a>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

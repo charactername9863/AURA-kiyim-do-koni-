@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage your AURA account settings.">
+    <title>Settings | AURA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="store-body">
+    <div class="market-strip"><span data-i18n="accountSettings">AURA account settings</span> <span>Bukhara · Uzbekistan</span></div>
+    <header class="store-nav">
+        <a class="store-brand" href="store.html"><span>A</span> AURA</a>
+        <div class="store-location"><small data-i18n="manageYour">Manage your</small><strong data-i18n="shoppingExperience">Shopping experience</strong></div>
+        <div class="store-actions">
+            <label class="avatar-picker" title="Change profile picture">
+                <input class="avatar-input" type="file" accept="image/*">
+                <img class="account-avatar" src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="Profile picture">
+            </label>
+            <a class="account-link" href="settings.html">
+                <span>My account</span>
+            </a>
+            <select class="language-select" aria-label="Language">
+                <option value="en">EN</option>
+                <option value="ru">RU</option>
+                <option value="uz">UZ</option>
+            </select>
+            <a class="cart-page-link" href="cart.html">Cart <span class="nav-cart-count">0</span></a>
+        </div>
+    </header>
+
+    <main class="settings-page">
+        <header class="settings-header">
+            <p class="eyebrow" data-i18n="yourPreferences">Your preferences</p>
+            <h1 data-i18n="settingsTitle">Settings</h1>
+            <p data-i18n="makeAura">Make AURA feel right for you.</p>
+        </header>
+
+        <form class="settings-card" id="settings-form">
+            <section class="settings-section" aria-labelledby="profile-title">
+                <div class="settings-section-heading">
+                    <div>
+                        <h2 id="profile-title" data-i18n="profile">Profile</h2>
+                        <p data-i18n="updateDetails">Update the details used for your shopping experience.</p>
+                    </div>
+                </div>
+                <div class="settings-fields">
+                    <label>
+                        <span data-i18n="displayName">Display name</span>
+                        <input type="text" name="display-name" placeholder="Your name">
+                    </label>
+                    <label>
+                        <span data-i18n="emailAddress">Email address</span>
+                        <input type="email" name="settings-email" placeholder="you@example.com">
+                    </label>
+                    <label>
+                        <span data-i18n="deliveryLocation">Delivery location</span>
+                        <select name="location">
+                            <option>Bukhara, Uzbekistan</option>
+                            <option>Tashkent, Uzbekistan</option>
+                            <option>Samarkand, Uzbekistan</option>
+                            <option>Other location</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span data-i18n="currency">Currency</span>
+                        <select name="currency">
+                            <option value="USD">US Dollar (USD)</option>
+                            <option value="UZS">Uzbekistani Som (UZS)</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span data-i18n="language">Language</span>
+                        <select name="language">
+                            <option value="en">English</option>
+                            <option value="ru">Русский</option>
+                            <option value="uz">O‘zbekcha</option>
+                        </select>
+                    </label>
+                </div>
+            </section>
+
+            <section class="settings-section" aria-labelledby="preferences-title">
+                <div class="settings-section-heading">
+                    <div>
+                        <h2 id="preferences-title" data-i18n="preferences">Preferences</h2>
+                        <p data-i18n="chooseNotifications">Choose what you would like to receive from AURA.</p>
+                    </div>
+                </div>
+                <label class="settings-toggle">
+                    <span>
+                        <strong data-i18n="saleAlerts">Sale alerts</strong>
+                        <small data-i18n="saleAlertsCopy">Get notified when selected products go on sale.</small>
+                    </span>
+                    <input type="checkbox" name="sale-alerts" checked>
+                </label>
+                <label class="settings-toggle">
+                    <span>
+                        <strong data-i18n="newArrivalsSetting">New arrivals</strong>
+                        <small data-i18n="newArrivalsCopy">Receive updates about new collections and products.</small>
+                    </span>
+                    <input type="checkbox" name="new-arrivals" checked>
+                </label>
+            </section>
+
+            <section class="settings-section" aria-labelledby="appearance-title">
+                <div class="settings-section-heading">
+                    <div>
+                        <h2 id="appearance-title" data-i18n="appearance">Appearance</h2>
+                        <p data-i18n="chooseAppearance">Choose how the marketplace looks to you.</p>
+                    </div>
+                </div>
+                <label>
+                    <span data-i18n="theme">Theme</span>
+                    <select name="theme">
+                        <option value="light">Light</option>
+                        <option value="warm">Warm</option>
+                    </select>
+                </label>
+            </section>
+
+            <div class="settings-actions">
+                <button class="settings-save-button" type="submit" data-i18n="saveSettings">Save settings</button>
+                <a href="store.html" data-i18n="cancel">Cancel</a>
+                <p class="settings-status" role="status" aria-live="polite"></p>
+            </div>
+        </form>
+    </main>
+
+    <footer class="store-footer">
+        <p>AURA · Bukhara clothing for modern living.</p>
+        <a href="index.html?logout=1">Sign out</a>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
